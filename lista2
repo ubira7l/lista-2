@@ -1,0 +1,267 @@
+/*
+Ubiratan Bruno da Silva Costa 924151360
+*/
+
+import java.util.Scanner;
+
+class main {
+ public static void main(String[] args) {
+
+ Scanner entrada = new Scanner(System.in);
+
+ /*//Exercicio 1
+    int valorInicial;
+    int temp = 0;
+    
+    System.out.println("Informe o valor inicial: ");
+    valorInicial = entrada.nextInt();
+    temp = valorInicial;
+    
+    for(int cont = 0; cont < 100; cont++){
+    valorInicial = valorInicial + 1;
+    System.out.println(cont+1 + "->" + valorInicial);
+    
+   }
+   
+    System.out.println("O valor incial foi: " +temp);
+ */
+ /* //Exercicio 2
+ Double x;
+ int y;
+
+ System.out.println("Informe o valor de x:");
+ x = entrada.nextDouble();
+ System.out.println("Informe o valor de y:");
+ y = entrada.nextInt();
+ double produto = 0;
+ for (int i = 0; i < Math.abs(B); i++) {
+ produto += A;
+ }
+ if (B < 0) {
+ produto = -produto;
+ }
+
+ System.out.printf("O produto de %.2f e %d é: %.2f%n", A, B, produto);
+ */
+
+ /* //Exercicio 3
+ while (true) {
+ System.out.print("Digite a massa inicial do material (ou um valor negativo para sair): ");
+ double massaInicial = entrada.nextDouble();
+ if (massaInicial < 0) {
+ System.out.println("Saindo do programa.");
+ break;
+ }
+ double massa = massaInicial;
+ int tempo = 0; // Tempo em segundos
+ while (massa >= 0.1) {
+ massa *= 0.75; // Perda de 25%
+ tempo += 30; // Incrementa 30 segundos
+ }
+ System.out.printf("Para uma massa inicial de %.2f gramas, leva %d segundos para ficar
+menor que 0.10 gramas.%n", massaInicial, tempo);
+ }
+ scanner.close();
+ }
+}
+ */
+
+ /* //exercicio 4
+ int produtoImpares = 1;
+ int somaPares = 0;
+ boolean acharImpar = false;
+ while (true) {
+ System.out.print("Digite um número positivo (ou um negativo para sair): ");
+ int numero = entrada.nextInt();
+ if (numero < 0) {
+ break;
+ }
+ if (numero % 2 == 0) {
+ somaPares += numero;
+ } else {
+ produtoImpares *= numero;
+ acharImpar = true;
+ }
+ }
+ if (acharImpar) {
+ System.out.println("Produto dos números ímpares: " + produtoImpares);
+ } else {
+ System.out.println("Nenhum número ímpar foi inserido.");
+ }
+ System.out.println("Soma dos números pares: " + somaPares);
+
+ entrada.close();
+ */
+
+
+ /*//Exercicio 5
+ int quantidadeMaiores50 = 0;
+ double somaAlturas10a20 = 0;
+ int contagemAlturas10a20 = 0;
+ int quantidadeInferior40 = 0;
+ int totalPessoas = 10;
+ for (int i = 1; i <= totalPessoas; i++) {
+ System.out.print("Digite a idade da pessoa " + i + ": ");
+ int idade = entrada.nextInt();
+ System.out.print("Digite a altura da pessoa " + i + " (em metros): ");
+ double altura = entrada.nextDouble();
+ System.out.print("Digite o peso da pessoa " + i + " (em quilos): ");
+ double peso = entrada.nextDouble();
+
+ if (idade > 50) {
+ quantidadeMaiores50++;
+
+ if (idade >= 10 && idade <= 20) {
+ somaAlturas10a20 += altura;
+ contagemAlturas10a20++;
+
+ if (peso < 40) {
+ quantidadeInferior40++;
+
+ System.out.println("Quantidade de pessoas com idade superior a 50 anos: " +
+quantidadeMaiores50);
+
+ if (contagemAlturas10a20 > 0) {
+ double mediaAlturas10a20 = somaAlturas10a20 / contagemAlturas10a20;
+ System.out.println("Média das alturas das pessoas com idade entre 10 e 20 anos: " +
+mediaAlturas10a20);
+ } else {
+ System.out.println("Não há pessoas com idade entre 10 e 20 anos.");
+ }
+
+
+ double porcentagemInferior40 = (quantidadeInferior40 / (double) totalPessoas) * 100;
+ System.out.println("Porcentagem de pessoas com peso inferior a 40 quilos: " +
+porcentagemInferior40 + "%");
+
+ }
+ }
+ */
+
+
+ /* //Exercicio 6
+ int totalKills = 0;
+ int totalDeaths = 0;
+ int totalAssists = 0;
+ while (true) {
+ System.out.print("Digite o número de kills na rodada: ");
+ int kills = entrada.nextInt();
+ System.out.print("Digite o número de deaths na rodada: ");
+ int deaths = entrada.nextInt();
+ System.out.print("Digite o número de assists na rodada: ");
+ int assists = entrada.nextInt();
+ totalKills += kills;
+ totalDeaths += deaths;
+ totalAssists += assists;
+ if (kills <= 5) {
+ System.out.println("noob");
+ } else if (kills >= 20) {
+ System.out.println("master");
+ }
+ if (deaths >= 20) {
+ System.out.println("Houston, we have a problem");
+ }
+ if (assists >= 20) {
+ System.out.println("team work");
+ }
+ System.out.print("Há um vencedor? (s/n): ");
+ char vencedor = entrada.next().charAt(0);
+ if (vencedor == 's' || vencedor == 'S') {
+ break;
+ }
+ }
+ System.out.println("Total de kills: " + totalKills);
+ System.out.println("Total de deaths: " + totalDeaths);
+ System.out.println("Total de assists: " + totalAssists);
+
+ entrada.close();
+ }
+ */
+
+ /*// Exercicio 7
+ while (true) {
+ System.out.println("Escolha uma forma geométrica:");
+ System.out.println("1. Retângulo");
+ System.out.println("2. Diagonal Superior Esquerda");
+ System.out.println("3. Diagonal Superior Direita");
+ System.out.println("4. Diagonal Inferior Esquerda");
+ System.out.println("5. Diagonal Inferior Direita");
+ System.out.println("6. Sair");
+ System.out.print("Opção: ");
+ int opcao = entrada.nextInt();
+ if (opcao == 6) {
+ break;
+ }
+ System.out.print("Informe a quantidade de colunas: ");
+ int colunas = entrada.nextInt();
+ int linhas = 5; // Definindo um número fixo de linhas
+ switch (opcao) {
+ case 1:
+ for (int i = 0; i < linhas; i++) {
+ for (int j = 0; j < colunas; j++) {
+ System.out.print("* ");
+ }
+ System.out.println();
+ }
+ break;
+ case 2:
+ for (int i = 0; i < linhas; i++) {
+ for (int j = 0; j < colunas; j++) {
+ if (j <= i) {
+ System.out.print("* ");
+ } else {
+ System.out.print(" ");
+ }
+ }
+ System.out.println();
+ }
+ break;
+ case 3:
+ for (int i = 0; i < linhas; i++) {
+ for (int j = 0; j < colunas; j++) {
+ if (j >= colunas - i - 1) {
+ System.out.print("* ");
+ } else {
+ System.out.print(" ");
+ }
+ }
+ System.out.println();
+ }
+ break;
+ case 4:
+ for (int i = 0; i < linhas; i++) {
+ for (int j = 0; j < colunas; j++) {
+ if (j == 0 || i >= j) {
+ System.out.print("* ");
+ } else {
+ System.out.print(" ");
+ }
+ }
+ System.out.println();
+ }
+ break;
+ case 5:
+ for (int i = 0; i < linhas; i++) {
+ for (int j = 0; j < colunas; j++) {
+ if (j == i) {
+ System.out.print("* ");
+ } else if (j < i) {
+ System.out.print("* ");
+ } else {
+ System.out.print(" ");
+ }
+ }
+ System.out.println();
+ }
+ break;
+ default:
+ System.out.println("Opção inválida! Tente novamente.");
+ }
+ System.out.println();
+ }
+ entrada.close();
+ */
+ }
+
+
+ }
